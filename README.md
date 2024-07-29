@@ -1,5 +1,8 @@
 # Crework Project
 
+## Note
+Due to some deployment issues, this new repository was created. For accessing the previous repository, follow this URL: "https://github.com/alwaysAnsh/Trello-copy"
+
 This project is built using Vite for the client-side and Node.js for the server-side. The project structure is as follows:
 
 root
