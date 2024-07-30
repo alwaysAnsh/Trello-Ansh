@@ -10,7 +10,7 @@ const initialState = {
 // Async thunk for fetching tasks
 export const fetchTasks = createAsyncThunk('tasks/fetchTasks', async (userId, thunkAPI) => {
   try {
-    const response = await axios.get(`http://localhost:4000/api/v1/getTasks/${userId}`);
+    const response = await axios.get(`https://trello-ansh-1.onrender.com/api/v1/getTasks/${userId}`);
     return response.data;
   } catch (error) {
     return thunkAPI.rejectWithValue(error.response.data);
@@ -19,7 +19,7 @@ export const fetchTasks = createAsyncThunk('tasks/fetchTasks', async (userId, th
 
 export const updateTaskStatus = createAsyncThunk('tasks/updateTaskStatus', async ({ taskId, newStatus }) => {
   try {
-    const response = await axios.patch(`http://localhost:4000/api/v1/updateTaskStatus`, { taskId,status: newStatus });
+    const response = await axios.patch(`https://trello-ansh-1.onrender.com/api/v1/updateTaskStatus`, { taskId,status: newStatus });
     return response.data;
   } catch (error) {
     // console.log("call hi nhi gyi")
@@ -29,7 +29,7 @@ export const updateTaskStatus = createAsyncThunk('tasks/updateTaskStatus', async
 export const deleteTask = createAsyncThunk('tasks/deleteTask', async (taskId, thunkAPI) => {
   const state = thunkAPI.getState();
   const token = state.user.currentUser.token;
-  await axios.delete(`http://localhost:4000/api/v1/deleteTask/${taskId}`, { data: { token } });
+  await axios.delete(`https://trello-ansh-1.onrender.com/api/v1/deleteTask/${taskId}`, { data: { token } });
   return taskId;
 });
 

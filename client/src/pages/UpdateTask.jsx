@@ -43,7 +43,7 @@ const UpdateTask = () => {
           
           setLoading(true);
           setError(false);
-          const res = await fetch(`http://localhost:4000/api/v1/updateTask/${taskId}`, {
+          const res = await fetch(`https://trello-ansh-1.onrender.com/api/v1/updateTask/${taskId}`, {
             method: 'PUT',
             headers: {
               'Content-Type': 'application/json',

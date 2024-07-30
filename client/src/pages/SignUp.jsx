@@ -23,7 +23,7 @@ const SignUp = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post("http://localhost:4000/api/v1/signup", formData);
+            const response = await axios.post("https://trello-ansh-1.onrender.com/api/v1/signup", formData);
             if(!response.data.success){
                 console.log("error fetching details");
             }
