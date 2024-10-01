@@ -5,7 +5,7 @@ Due to some deployment issues, this new repository was created. For accessing th
 ## Note-2
 Please wait for a while till the project loads as it may take some time to load fetching details from Render (where this project is hosted)
 
-This project is built using Vite for the client-side and Node.js for the server-side. The project structure is as follows:
+----->  This project is built using Vite for the client-side and Node.js for the server-side. The project structure is as follows:
 
 root
 ├── client
